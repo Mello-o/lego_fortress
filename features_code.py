@@ -7,8 +7,8 @@ buzzer = Buzzer(23)
 ldr = LightSensor(21)
 
 while True:
-    print(ldr.value)
-    if ldr.value < 0.1:
+    
+    if ldr.value > 0.1:
        for l in leds:
            l.on()
            buzzer.beep(on_time = 0.1)
